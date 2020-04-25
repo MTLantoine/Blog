@@ -1,0 +1,16 @@
+ul {
+  padding-left: 0;
+  display: flex;
+  background-color: #f6f6f6;
+  li {
+    padding: 7px 20px;
+    list-style: none;
+    a {
+      color: rgb(109, 109, 109);
+      text-decoration: none;
+    }
+    &.active {
+      background-color: #e7e7e7;
+    }
+  }
+}

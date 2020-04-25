@@ -1,0 +1,21 @@
+<li [ngClass]="{'list-group-item': true, 'list-group-item-success': loveIts > 0, 'list-group-item-danger': loveIts < 0 }">
+    <div clas="list-group-item-panel">
+        <header>
+            <h2>
+                {{ title }}
+            </h2>
+            <span>
+                {{ created_at | async | date: "dd/MM/yyyy, hh:mm:ss a" }}
+            </span>
+        </header>
+        <div class="list-group-item-content">
+            {{ content }}
+        </div>
+        <div class="list-group-item-button">
+            <input (click)="onLike()" type="button" value="Love it !"/>
+            <input (click)="onDislike()" type="button" value="Don't love it !"/>
+            <input (click)="onDontCare()" type="button" value="Don't care ..."/>
+            <input (click)="onDelete()" type="button" value="Delete post"/>
+        </div>
+    </div>
+</li>
